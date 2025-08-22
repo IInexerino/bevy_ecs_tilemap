@@ -2,7 +2,7 @@ use bevy::{input::ButtonInput, math::Vec3, prelude::*, render::camera::Camera};
 
 // A simple camera system for moving and zooming the camera.
 #[allow(dead_code)]
-pub fn movement(
+pub fn movement_wasd_zoom_zx(
     time: Res<Time>,
     keyboard_input: Res<ButtonInput<KeyCode>>,
     mut query: Query<(&mut Transform, &mut Projection), With<Camera>>,

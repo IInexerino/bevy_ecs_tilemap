@@ -124,7 +124,7 @@ fn main() {
         .add_plugins(TilemapPlugin)
         .insert_resource(ChunkManager::default())
         .add_systems(Startup, startup)
-        .add_systems(Update, helpers::camera::movement)
+        .add_systems(Update, helpers::camera::movement_wasd_zoom_zx)
         .add_systems(Update, spawn_chunks_around_camera)
         .add_systems(Update, despawn_outofrange_chunks)
         .run();

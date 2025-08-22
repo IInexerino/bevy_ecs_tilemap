@@ -226,7 +226,9 @@ impl TilemapTexture {
     }
 }
 
-/// Size of the tiles in pixels
+/// Size of the tiles in the texture in pixels
+/// 
+/// (The tiles in the associated Tilemap's texture image must be of identical size)
 #[derive(Component, Reflect, Default, Clone, Copy, Debug, PartialOrd, PartialEq)]
 #[reflect(Component)]
 pub struct TilemapTileSize {
@@ -290,7 +292,10 @@ impl From<Vec2> for TilemapTileSize {
     }
 }
 
-/// Size of the tiles on the grid in pixels.
+/// Size that you want the tiles to be in the grid in pixels.
+/// 
+/// Does not resize the images, only determines the size of the tiles in the in game grid, at the center of which the image will be displayed
+/// 
 /// This can be used to overlay tiles on top of each other.
 /// Ex. A 16x16 pixel tile can be overlapped by 8 pixels by using
 /// a grid size of 16x8.

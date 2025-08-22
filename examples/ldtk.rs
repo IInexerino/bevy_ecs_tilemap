@@ -41,6 +41,6 @@ fn main() {
         .add_plugins(TilemapPlugin)
         .add_plugins(helpers::ldtk::LdtkPlugin)
         .add_systems(Startup, startup)
-        .add_systems(Update, helpers::camera::movement)
+        .add_systems(Update, helpers::camera::movement_wasd_zoom_zx)
         .run();
 }

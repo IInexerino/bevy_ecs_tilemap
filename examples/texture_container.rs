@@ -103,7 +103,7 @@ mod no_atlas {
             )
             .add_plugins(TilemapPlugin)
             .add_systems(Startup, startup)
-            .add_systems(Update, helpers::camera::movement)
+            .add_systems(Update, helpers::camera::movement_wasd_zoom_zx)
             .run();
     }
 }

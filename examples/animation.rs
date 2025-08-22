@@ -146,7 +146,7 @@ fn main() {
         .add_systems(Startup, startup)
         .add_systems(Startup, create_background)
         .add_systems(Startup, create_animated_flowers)
-        .add_systems(Update, helpers::camera::movement)
+        .add_systems(Update, helpers::camera::movement_wasd_zoom_zx)
         .add_systems(Update, pause_animation)
         .run();
 }

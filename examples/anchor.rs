@@ -13,7 +13,7 @@ use bevy::{image::Image, sprite::Anchor};
 use bevy_ecs_tilemap::prelude::*;
 mod helpers;
 use helpers::anchor::rotate_right;
-use helpers::camera::movement as camera_movement;
+use helpers::camera::movement_wasd_zoom_zx as camera_movement;
 use rand::seq::SliceRandom;
 use rand::thread_rng;
 

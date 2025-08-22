@@ -1,7 +1,7 @@
 use bevy::{color::palettes, math::Vec4Swizzles, prelude::*};
 use bevy_ecs_tilemap::prelude::*;
 mod helpers;
-use helpers::camera::movement as camera_movement;
+use helpers::camera::movement_wasd_zoom_zx as camera_movement;
 
 // Press SPACE to change map type. Hover over mouse tiles to highlight their labels.
 //

@@ -66,7 +66,7 @@ impl From<&TilePos> for Vec2 {
     }
 }
 
-/// A texture index into the atlas or texture array for a single tile. Indices in an atlas are horizontal based.
+/// A texture index into the atlas or texture array for a single tile's. Indices in an atlas are horizontal based.
 #[derive(Component, Reflect, Default, Clone, Copy, Debug, Hash, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[reflect(Component)]

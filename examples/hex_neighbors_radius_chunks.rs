@@ -1,7 +1,7 @@
 use bevy::{color::palettes, math::Vec4Swizzles, prelude::*};
 use bevy_ecs_tilemap::{helpers::hex_grid::offset::*, prelude::*};
 mod helpers;
-use helpers::camera::movement as camera_movement;
+use helpers::camera::movement_wasd_zoom_zx as camera_movement;
 
 const CHUNK_MAP_SIDE_LENGTH_X: u32 = 4;
 const CHUNK_MAP_SIDE_LENGTH_Y: u32 = 4;

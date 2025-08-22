@@ -92,7 +92,7 @@ fn main() {
             TilemapPlugin,
         ))
         .add_systems(Startup, startup)
-        .add_systems(Update, helpers::camera::movement)
+        .add_systems(Update, helpers::camera::movement_wasd_zoom_zx)
         .add_systems(Update, remove_tiles)
         .run();
 }

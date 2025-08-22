@@ -209,7 +209,7 @@ fn main() {
         .add_systems(
             Update,
             (
-                helpers::camera::movement,
+                helpers::camera::movement_wasd_zoom_zx,
                 switch_map_type.run_if(input_just_pressed(KeyCode::Space)),
                 update_map_type_label,
             )
