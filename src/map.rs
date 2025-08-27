@@ -68,7 +68,7 @@ impl Default for TilemapId {
     }
 }
 
-/// Size of the tilemap in tiles.
+/// Size of the tilemap in columns and rows.
 #[derive(Component, Reflect, Default, Clone, Copy, Debug, Hash, PartialEq)]
 #[reflect(Component)]
 pub struct TilemapSize {
@@ -121,6 +121,9 @@ impl From<UVec2> for TilemapSize {
     }
 }
 
+
+/// A component for the tilemap entity which contains the tile texture/s that all of the tiles can be configured by using their
+/// [`TileTextureIndex(u32)`] component
 #[derive(Component, Reflect, Clone, Debug, Hash, PartialEq, Eq)]
 #[reflect(Component)]
 pub enum TilemapTexture {
@@ -226,9 +229,9 @@ impl TilemapTexture {
     }
 }
 
-/// Size of the tiles in the texture in pixels
+/// Input information about the size of the tiles in the texture image in pixels
 /// 
-/// (The tiles in the associated Tilemap's texture image must be of identical size)
+/// (The tiles in the associated Tilemap's texture image/s must be of identical size)
 #[derive(Component, Reflect, Default, Clone, Copy, Debug, PartialOrd, PartialEq)]
 #[reflect(Component)]
 pub struct TilemapTileSize {
@@ -296,7 +299,7 @@ impl From<Vec2> for TilemapTileSize {
 /// 
 /// Does not resize the images, only determines the size of the tiles in the in game grid, at the center of which the image will be displayed
 /// 
-/// This can be used to overlay tiles on top of each other.
+/// This can be used to overlay tiles on top of each other, or space them apart.
 /// Ex. A 16x16 pixel tile can be overlapped by 8 pixels by using
 /// a grid size of 16x8.
 #[derive(Component, Reflect, Default, Clone, Copy, Debug, PartialOrd, PartialEq)]
